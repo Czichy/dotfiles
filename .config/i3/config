@@ -48,9 +48,23 @@ popup_during_fullscreen smart
 # start a terminal
 bindsym $mod+Return workspace $ws1; exec --no-startup-id alacritty
 
-# start a program launcher
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Source Sans Pro-10' -nb '#212121' -sb '#2B83A6' -sf '#FFFFFF'"
-bindsym $mod+d exec --no-startup-id rofi -show drun
+#####################################################################################################################
+#################                          3 menu's in arcolinux                                     #################
+#####################################################################################################################
+# start dmenu
+bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+# gmrun
+bindsym mod1+F2 exec --no-startup-id gmrun
+
+# start xfce-appfinder
+bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
+
+# start rofi full
+bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
+
+# start rofi small
+bindsym $mod+F12 exec --no-startup-id rofi -show run -font "Noto Sans 13"
 
 # switching window with win+tab
 bindsym $mod+Tab exec --no-startup-id rofi -show window
