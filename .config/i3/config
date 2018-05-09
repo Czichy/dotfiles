@@ -399,7 +399,7 @@ for_window [class="Vivaldi-stable"] focus
 #exec --no-startup-id atom
 
 #file manager
-exec --no-startup-id thunar
+#exec --no-startup-id thunar
 
 #Mail clients
 #exec --no-startup-id evolution
@@ -1036,7 +1036,7 @@ client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 exec --no-startup-id setxkbmap de
 exec_always --no-startup-id numlockx on
 # Configure keyboard repeat speed
-exec --no-startup-id xset r rate 200 160
+exec_always --no-startup-id xset r rate 200 160
 
 
 

@@ -209,3 +209,9 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey -M main -M viins -M vicmd   '^[[33~' backward-kill-word
 bindkey '^ ' autosuggest-accept
+
+### powerline 
+powerline-daemon -q
+. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+neofetch
