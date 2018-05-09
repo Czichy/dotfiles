@@ -1035,6 +1035,8 @@ client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 #exec --no-startup-id setxkbmap be
 exec --no-startup-id setxkbmap de
 exec_always --no-startup-id numlockx on
+# Configure keyboard repeat speed
+exec --no-startup-id xset r rate 200 160
 
 
 

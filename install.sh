@@ -7,8 +7,10 @@ white='\e[0;37m'
 CMD="$1"
 dotfilesdir=$(pwd)
 backupdir=~/.dotfiles.orig
-dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc .tmux.conf .wgetrc .Xresources .zshrc)
-dotfiles_config=(alacritty dunst i3 rofi)
+dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc 
+.tmux.conf .wgetrc .Xresources .xinitrc .zshrc .vim .oh-my-zsh
+)
+dotfiles_config=(alacritty dunst htop i3 pulse rofi Thunar volumeicon xfce4)
 
 printusage() {
     prog=$(basename "$0")
@@ -57,15 +59,15 @@ install() {
         /bin/rm -rf ~/${dots}
         /bin/ln -fs "$dotfilesdir/${dots}" ~/
     done
-
+set -x
     # Install config to ~/.config.
     mkdir -p ~/.config
     for dots_conf in "${dotfiles_config[@]}"
     do
         /bin/rm -rf ~/.config/${dots_conf[@]//./}
-        /bin/ln -fs "$dotfilesdir/${dots_conf}" ~/.config/${dots_conf[@]//./}
+        /bin/ln -fs "$dotfilesdir/.config/${dots_conf}" ~/.config/${dots_conf[@]//./}
     done
-
+set +x
     echo -e $blue"New dotfiles is installed!\n"$white >&2
     echo "There may be some errors when Terminal is restarted." >&2
     echo "Please read carefully the error messages and make sure all packages are installed. See more info in README.md." >&2
