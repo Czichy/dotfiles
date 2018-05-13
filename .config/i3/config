@@ -456,7 +456,7 @@ exec --no-startup-id conky -c ~/.config/i3/system-overview
 #################                                 system applications                               #################
 #####################################################################################################################
 
-exec --no-startup-id thunar --daemon &
+#exec --no-startup-id thunar --daemon &
 exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # activate again if errors occurr
@@ -1037,7 +1037,7 @@ exec --no-startup-id setxkbmap de
 exec_always --no-startup-id numlockx on
 # Configure keyboard repeat speed
 exec_always --no-startup-id xset r rate 200 160
-
+#exec --no-startup-id exset -b&
 
 
 #####################################################################################################################

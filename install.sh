@@ -8,7 +8,7 @@ CMD="$1"
 dotfilesdir=$(pwd)
 backupdir=~/.dotfiles.orig
 dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc 
-.tmux.conf .wgetrc .Xresources .xinitrc .zshrc .vim .oh-my-zsh
+.tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zprofile .vim .oh-my-zsh
 )
 dotfiles_config=(alacritty dunst htop i3 pulse rofi Thunar volumeicon xfce4)
 
