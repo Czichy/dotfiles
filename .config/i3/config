@@ -450,7 +450,7 @@ exec --no-startup-id variety
 exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #Polybar
-#exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 #####################################################################################################################
 #################                                 system applications                               #################
@@ -460,8 +460,9 @@ exec --no-startup-id conky -c ~/.config/i3/system-overview
 exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # activate again if errors occurr
-#exec --no-startup-id xfsettingsd &
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+exec --no-startup-id xfsettingsd &
+exec --no-startup-id nitrogen --restore
+#exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 #####################################################################################################################
 #################                          applications keyboard shortcuts                          #################
@@ -853,7 +854,7 @@ bar {
     # put hastag in front if not installed
 
 #status_command i3blocks
-status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#status_command i3blocks -c ~/.config/i3/i3blocks.conf
 #status_command i3blocks -c ~/.config/i3/i3blocks-rainbow.conf
 #status_command i3blocks -c ~/.config/i3/i3blocks-original.conf
 #status_command i3blocks -c ~/.config/i3/i3blocks-awesome.conf
@@ -1036,8 +1037,8 @@ client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 exec --no-startup-id setxkbmap de
 exec_always --no-startup-id numlockx on
 # Configure keyboard repeat speed
-exec_always --no-startup-id xset r rate 200 160
-#exec --no-startup-id exset -b&
+exec_always --no-startup-id xset r rate 200 155
+exec --no-startup-id exset -b&
 
 
 #####################################################################################################################

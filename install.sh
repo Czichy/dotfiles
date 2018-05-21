@@ -10,7 +10,7 @@ backupdir=~/.dotfiles.orig
 dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc 
 .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zprofile .vim .oh-my-zsh
 )
-dotfiles_config=(alacritty dunst htop i3 pulse rofi Thunar volumeicon xfce4)
+dotfiles_config=(alacritty dunst htop i3 polybar pulse rofi Thunar volumeicon xfce4)
 
 printusage() {
     prog=$(basename "$0")
