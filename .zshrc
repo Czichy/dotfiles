@@ -215,3 +215,4 @@ powerline-daemon -q
 . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 neofetch
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
