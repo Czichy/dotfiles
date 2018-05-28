@@ -1,0 +1,59 @@
+" This file is given as a sample file.
+" You might copy it but avoid symbolic link.
+
+"""""""""""""""""""""""""""""""""""""
+" Leader key
+""""""""""""""""""""""""""""""""""""""
+
+" change leader to space
+"let mapleader=" "
+
+"""""""""""""""""""""""""""""""""""""
+" Disable/Enable part of the default conf
+" Uncomment what you need to disable
+""""""""""""""""""""""""""""""""""""""
+
+" completion
+" let g:Vimmic_AlwaysComplete=1
+
+" default colors :
+" let g:Vimmic_DisableDefaultColors=1
+
+ " highlight word under cursor
+" let g:disable_highlightWordUnderCursor=1
+
+" the right margin
+" let g:Vimmic_DisableMargin=1
+" let g:Vimmic_MarginPos="120"
+" let g:Vimmic_MarginBG="Black"
+
+" Statusbar colors
+
+" let g:StatusBG="White"
+" let g:StatusLeftBG="233"
+" let g:StatusNCBG="233"
+" let g:StatusNCFG="White"
+"" Modes colors
+" let g:StatusNormalFG="0"
+" let g:StatusInsertFG="Blue"
+" let g:StatusReplaceFG="Red"
+" True colors example
+"" set termguicolors
+" let g:StatusNormalFG='#fafafa'
+" let g:StatusInsertFG='#2196f3'
+" let g:StatusReplaceFG='#f44336'
+" let g:StatusBG='#162228'
+" let g:StatusNCBG='#263238'
+" let g:StatusLeftBG='#2196f3'
+" let g:StatusLeftFG='Black'
+
+
+""""""""""""""""""""""""""""""""""""
+" Filetypes
+""""""""""""""""""""""""""""""""""""
+
+" VTK files are xml
+autocmd BufRead,BufNewFile *.vti,*.vtu,*.vtp set filetype=xml
+
+" plt files are gnuplot
+autocmd BufRead,BufNewFile *.plt set filetype=gnuplot

@@ -7,10 +7,10 @@ white='\e[0;37m'
 CMD="$1"
 dotfilesdir=$(pwd)
 backupdir=~/.dotfiles.orig
-dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc 
-.tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zprofile .vim .oh-my-zsh
+dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc
+.tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zprofile oh-my-zsh
 )
-dotfiles_config=(alacritty dunst htop i3 polybar pulse rofi Thunar volumeicon xfce4)
+dotfiles_config=(alacritty dunst htop i3 nvim polybar pulse rofi Thunar vim volumeicon xfce4)
 
 printusage() {
     prog=$(basename "$0")
@@ -67,7 +67,10 @@ set -x
         /bin/rm -rf ~/.config/${dots_conf[@]//./}
         /bin/ln -fs "$dotfilesdir/.config/${dots_conf}" ~/.config/${dots_conf[@]//./}
     done
-set +x
+
+    ln -sf ~/.config/vim/.vimrc ~
+
+    set +x
     echo -e $blue"New dotfiles is installed!\n"$white >&2
     echo "There may be some errors when Terminal is restarted." >&2
     echo "Please read carefully the error messages and make sure all packages are installed. See more info in README.md." >&2
