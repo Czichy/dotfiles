@@ -1,3 +1,17 @@
+[,v
+x11 capslock on,v
+ ,v
+https://stackoverflow.com/questions/22681578/how-to-find-where-a-package-is-installed-by-pacman,v
+d,v
+.,v
+https://forum.antergos.com/topic/8656/uninstalling-lightdm/3,v
+post transaction hook missing lightdm dependency,v
+#,v
+zsh alacrity,v
+yaourt gespeichertes paket installieren,v
+https://github.com/Czichy/bumblebee-status,v
+https://archlinux.fr/yaourt-en,v
+https://forum.antergos.com/topic/5054/how-do-i-uninstall-packages/7,v
 https://bbs.archlinux.org/viewtopic.php?id=225806,v
 vundle vs dein,v
 http://valloric.github.io/YouCompleteMe/,v

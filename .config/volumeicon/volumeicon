@@ -1,5 +1,6 @@
 [Alsa]
-card=HDA Intel HDMI
+card=HDA Intel PCH
+channel=Speaker
 
 [Notification]
 show_notification=true
