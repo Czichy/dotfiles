@@ -70,53 +70,81 @@ exec --no-startup-id ~/.screenlayout/multimonitor.sh
 set $firstMonitor HDMI1
 set $secondMonitor HDMI2
 
-#set $firstMonitor LVDS1
-#set $secondMonitor LVDS1
+# Workspaces
+focus_follows_mouse no
 
-#set $firstMonitor DVI-I-2
-#set $secondMonitor VGA-0
+set $workspace1 workspace 1
+set $workspace2 workspace 2
+set $workspace3 workspace 3
+set $workspace4 workspace 4
+set $workspace5 workspace 5
+set $workspace6 workspace 6
+set $workspace7 workspace 7
+set $workspace8 workspace 8
+set $workspace9 workspace 9
+set $workspace0 workspace 10
 
-#set $firstMonitor DVI-I-2
-#set $secondMonitor DVI-I-3
+$workspace1 output $firstMonitor
+$workspace2 output $firstMonitor
+$workspace3 output $firstMonitor
+$workspace4 output $firstMonitor
+$workspace5 output $firstMonitor
+$workspace6 output $secondMonitor
+$workspace7 output $secondMonitor
+$workspace8 output $secondMonitor
+$workspace9 output $secondMonitor
+$workspace0 output $secondMonitor
 
-#set $firstMonitor DVI-0
-#set $secondMonitor DVI-1
+# Switch to workspace using keypad
+bindcode $numlock+$mod+87 $workspace1
+bindcode $numlock+$mod+88 $workspace2
+bindcode $numlock+$mod+89 $workspace3
+bindcode $numlock+$mod+83 $workspace4
+bindcode $numlock+$mod+84 $workspace5
+bindcode $numlock+$mod+85 $workspace6
+bindcode $numlock+$mod+79 $workspace7
+bindcode $numlock+$mod+80 $workspace8
+bindcode $numlock+$mod+81 $workspace9
+bindcode $numlock+$mod+90 $workspace0
 
-workspace 1 output $firstMonitor
-workspace 2 output $firstMonitor
-workspace 3 output $firstMonitor
-workspace 4 output $firstMonitor
-workspace 5 output $firstMonitor
-workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
-workspace 10 output $secondMonitor
+# Switch to workspace using number row
+bindsym $mod+1 $workspace1
+bindsym $mod+2 $workspace2
+bindsym $mod+3 $workspace3
+bindsym $mod+4 $workspace4
+bindsym $mod+5 $workspace5
+bindsym $mod+6 $workspace6
+bindsym $mod+7 $workspace7
+bindsym $mod+8 $workspace8
+bindsym $mod+9 $workspace9
+bindsym $mod+0 $workspace0
 
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+# Move window to workspace using keypad
+bindcode $numlock+$mod+Shift+87 move container to $workspace1; $workspace1
+bindcode $numlock+$mod+Shift+88 move container to $workspace2; $workspace2
+bindcode $numlock+$mod+Shift+89 move container to $workspace3; $workspace3
+bindcode $numlock+$mod+Shift+83 move container to $workspace4; $workspace4
+bindcode $numlock+$mod+Shift+84 move container to $workspace5; $workspace5
+bindcode $numlock+$mod+Shift+85 move container to $workspace6; $workspace6
+bindcode $numlock+$mod+Shift+79 move container to $workspace7; $workspace7
+bindcode $numlock+$mod+Shift+80 move container to $workspace8; $workspace8
+bindcode $numlock+$mod+Shift+81 move container to $workspace9; $workspace9
+bindcode $numlock+$mod+Shift+90 move container to $workspace0; $workspace0
 
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1; workspace 1
-bindsym $mod+Shift+2 move container to workspace 2; workspace 2
-bindsym $mod+Shift+3 move container to workspace 3; workspace 3
-bindsym $mod+Shift+4 move container to workspace 4; workspace 4
-bindsym $mod+Shift+5 move container to workspace 5; workspace 5
-bindsym $mod+Shift+6 move container to workspace 6; workspace 6
-bindsym $mod+Shift+7 move container to workspace 7; workspace 7
-bindsym $mod+Shift+8 move container to workspace 8; workspace 8
-bindsym $mod+Shift+9 move container to workspace 9; workspace 9
-bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+# Move window to workspace using number row
+bindsym $mod+Shift+1 move container to $workspace1; $workspace1
+bindsym $mod+Shift+2 move container to $workspace2; $workspace2
+bindsym $mod+Shift+3 move container to $workspace3; $workspace3
+bindsym $mod+Shift+4 move container to $workspace4; $workspace4
+bindsym $mod+Shift+5 move container to $workspace5; $workspace5
+bindsym $mod+Shift+6 move container to $workspace6; $workspace6
+bindsym $mod+Shift+7 move container to $workspace7; $workspace7
+bindsym $mod+Shift+8 move container to $workspace8; $workspace8
+bindsym $mod+Shift+9 move container to $workspace9; $workspace9
+bindsym $mod+Shift+0 move container to $workspace0; $workspace0
 
+# Automatically rename workspaces
+exec_always i3-autoname-workspaces &
 
 
 #####################################################################################################################
@@ -155,15 +183,15 @@ bindsym $mod+X mode "$mode_system"
 set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
-    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
-    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
-    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
-    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
-    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+        bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+        bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+        bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+        bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+        bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+# back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
 
 
@@ -299,24 +327,24 @@ bindsym $mod+a focus parent
 bindsym $mod+r mode "resize"
 
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+    bindsym $left       resize shrink width 10 px or 10 ppt
         bindsym $down       resize grow height 10 px or 10 ppt
         bindsym $up         resize shrink height 10 px or 10 ppt
         bindsym $right      resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
         bindsym Left        resize shrink width 10 px or 10 ppt
         bindsym Down        resize grow height 10 px or 10 ppt
         bindsym Up          resize shrink height 10 px or 10 ppt
         bindsym Right       resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
+# back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
@@ -577,54 +605,70 @@ bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
 
 
 #####################################################################################################################
-#################                          floating or tiled                                        #################
+#################                          specific window configuration                                      #################
 #####################################################################################################################
 
+# Set default workspace layout
+workspace_layout tabbed
 
-#floating enabled from some programs - find with xprop
+# Specific window configurationfor_window    [class=".*"]                   sticky enable
+for_window    [window_role="pop-up"]         floating enable
+for_window    [class="Pinentry"]             floating enable
+for_window    [class="copyq"]                floating enable
+for_window    [class="Peek"]                 floating enable
+for_window    [class="Rofi"]                 floating enable
+for_window    [class="usbguard-applet-qt"]   floating enable, resize set 1000 600, move position center
+for_window    [class="Google-chrome"]        move container to $workspace2, title_format "Google Chrome"
+for_window    [class="Chromium"]             move container to $workspace2, title_format "Chromium"
+for_window    [class="Firefox"]              move container to $workspace2, title_format "Google Chrome"   
+for_window    [class="Wire"]                 move container to $workspace3
+for_window    [class="Slack"]                move container to $workspace3
+for_window    [class="Thunderbird"]          move container to $workspace4
+for_window    [class="TeamViewer"]           move container to $workspace9, floating enable, sticky disable
+for_window    [class="xfreerdp"]             move container to $workspace9
 
-for_window [class="Bleachbit"] floating disable
-for_window [class="Blueberry.py"] floating enable
-for_window [class="Brasero"] floating disable
-for_window [class="Galculator"] floating enable
-for_window [class="Gnome-disks"] floating disable
-for_window [class="^Gnome-font-viewer$"] floating enable
-for_window [class="^Gpick$"] floating enable
-for_window [class="Hexchat"] floating disable
-for_window [class="Imagewriter"] floating enable
-for_window [class="Font-manager"] floating enable
-#for_window [class="qt5ct|Lxappearance] floating enable
-for_window [class="Nitrogen"] floating disable
-for_window [class="Pavucontrol"] floating disable
-for_window [class="Peek"] floating enable
-for_window [class="^Skype$"] floating enable
-for_window [class="^Spotify$"] floating disable
-for_window [class="System-config-printer.py"] floating enable
-for_window [class="Unetbootin.elf"] floating enable
-for_window [class="Usb-creator-gtk"] floating enable
-for_window [class="^Vlc$"] floating disable
-for_window [class="Wine"] floating disable
-for_window [class="Xfburn"] floating disable
-for_window [class="Xfce4-appfinder"] floating enable
-for_window [class="Xfce4-settings-manager"] floating disable
-for_window [class="Xfce4-taskmanager"] floating enable
-
-
-#for_window [instance="gimp"] floating disable
-for_window [instance="script-fu"] border normal
-for_window [instance="variety"] floating disable
-
-
-for_window [title="Copying"] floating enable
-for_window [title="Deleting"] floating enable
-for_window [title="Moving"] floating enable
-for_window [title="^Terminator Preferences$"] floating enable
-
-
-#for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="^Preferences$"] floating enable
-for_window [window_role="setup"] floating enable
+# for_window [class="Bleachbit"] floating disable
+#for_window [class="Blueberry.py"] floating enable
+#for_window [class="Brasero"] floating disable
+#for_window [class="Galculator"] floating enable
+#for_window [class="Gnome-disks"] floating disable
+#for_window [class="^Gnome-font-viewer$"] floating enable
+#for_window [class="^Gpick$"] floating enable
+#for_window [class="Hexchat"] floating disable
+#for_window [class="Imagewriter"] floating enable
+#for_window [class="Font-manager"] floating enable
+##for_window [class="qt5ct|Lxappearance] floating enable
+#for_window [class="Nitrogen"] floating disable
+#for_window [class="Pavucontrol"] floating disable
+#for_window [class="Peek"] floating enable
+#for_window [class="^Skype$"] floating enable
+#for_window [class="^Spotify$"] floating disable
+#for_window [class="System-config-printer.py"] floating enable
+#for_window [class="Unetbootin.elf"] floating enable
+#for_window [class="Usb-creator-gtk"] floating enable
+#for_window [class="^Vlc$"] floating disable
+#for_window [class="Wine"] floating disable
+#for_window [class="Xfburn"] floating disable
+#for_window [class="Xfce4-appfinder"] floating enable
+#for_window [class="Xfce4-settings-manager"] floating disable
+#for_window [class="Xfce4-taskmanager"] floating enable
+#
+#
+##for_window [instance="gimp"] floating disable
+#for_window [instance="script-fu"] border normal
+#for_window [instance="variety"] floating disable
+#
+#
+#for_window [title="Copying"] floating enable
+#for_window [title="Deleting"] floating enable
+#for_window [title="Moving"] floating enable
+#for_window [title="^Terminator Preferences$"] floating enable
+#
+#
+##for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
+#for_window [window_role="pop-up"] floating enable
+#for_window [window_role="^Preferences$"] floating enable
+#for_window [window_role="setup"] floating enable
 
 
 
@@ -636,9 +680,9 @@ for_window [window_role="setup"] floating enable
 #####################################################################################################################
 
 
-for_window [class="Gnome-terminal"] focus
+#for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
-for_window [class="Terminator"] focus
+#for_window [class="Terminator"] focus
 
 
 
@@ -776,14 +820,14 @@ set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
+    bindsym o      mode "$mode_gaps_outer"
         bindsym i      mode "$mode_gaps_inner"
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
+    bindsym plus  gaps inner current plus 5
         bindsym minus gaps inner current minus 5
         bindsym 0     gaps inner current set 0
 
@@ -795,13 +839,13 @@ mode "$mode_gaps_inner" {
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
+    bindsym plus  gaps outer current plus 5
         bindsym minus gaps outer current minus 5
         bindsym 0     gaps outer current set 0
 
         bindsym Shift+plus  gaps outer all plus 5
         bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
+        bindsym Shift+0     gaps outer all solor scheme (Gruvbox dark)
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -829,20 +873,39 @@ exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 #####################################################################################################################
 #i3status-rust
 
+# Color scheme (Gruvbox dark)
+set $color_normal_white  #a89984
+set $color_bright_white  #ebdbb2
+set $color_normal_gray   #222222
+set $color_bright_gray   #3c3836
+set $color_bright_yellow #d79921
+set $color_normal_black  #282828
+set $color_unused        #ff0000
+
 bar {
-      font pango:DejaVu Sans Mono, FontAwesome 12
-            position top
-                  status_command /usr/bin/i3status-rs ~/.config/i3/status.toml
-                        colors {
-                                    separator #666666
-                                                background #222222
-                                                            statusline #dddddd
-                                                                        focused_workspace #0088CC #0088CC #ffffff
-                                                                                    active_workspace #333333 #333333 #ffffff
-                                                                                                inactive_workspace #333333 #333333 #888888
-                                                                                                            urgent_workspace #2f343a #900000 #ffffff
-                                                                                                                  }
-                                                                                                                  }
+    font pango:DejaVu Sans Mono, FontAwesome 12
+        position top
+        status_command /usr/bin/i3status-rs ~/.config/i3/status.toml
+        colors {
+# Whole color settings
+            background $color_normal_gray
+                separator  $color_bright_gray
+                statusline $color_bright_white
+
+#                   # Type             border                 background              font
+                    focused_workspace  $color_bright_gray     $color_bright_gray      $color_bright_white
+                    active_workspace   $color_unused          $color_unused           $color_unused
+                    inactive_workspace $color_normal_gray     $color_normal_gray      $color_normal_white
+                    urgent_workspace   $color_bright_yellow   $color_bright_yellow $color_normal_black
+        }
+}
+
+# Colors                  border                 background             text                   indicator       child_border
+client.focused            $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_white
+client.focused_inactive   $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_black
+client.unfocused          $color_normal_gray     $color_normal_gray     $color_normal_white    $color_unused   $color_normal_black
+client.urgent             $color_bright_yellow   $color_bright_yellow   $color_normal_black    $color_unused   $color_unused
+client.placeholder $color_unused $color_normal_black $color_unused $color_unused $color_unused)
 
 #bar {
 
@@ -850,17 +913,17 @@ bar {
 #    workspace_buttons yes
 #    font pango:Noto Sans 14
 
-    #position top
+#position top
 #    position bottom
 
-    #tray_output $firstMonitor
-    #tray_output $secondMonitor
+#tray_output $firstMonitor
+#tray_output $secondMonitor
 
 # OPTION 1 : i3status
 
-    # type status_command i3status without the config file and
-    # you will get the standard i3status bar
-    # Second one is the standard statusbar with my personal settings
+# type status_command i3status without the config file and
+# you will get the standard i3status bar
+# Second one is the standard statusbar with my personal settings
 
 #status_command i3status
 #status_command i3status -c ~/.config/i3/i3status.conf
@@ -868,9 +931,9 @@ bar {
 
 # OPTION 2 : i3blocks
 
-    # https://github.com/vivien/i3blocks
-    # another way to provide text in the statusbar
-    # put hastag in front if not installed
+# https://github.com/vivien/i3blocks
+# another way to provide text in the statusbar
+# put hastag in front if not installed
 
 #status_command i3blocks
 #status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -881,10 +944,10 @@ bar {
 
 # OPTION 3 : conky
 
-    # You can also replace the istatus bar with a conky
-    # start-conky-i3statusbar.sh is started and conky will follow
-    # documentation : https://i3wm.org/docs/user-contributed/conky-i3bar.html
-    # conky configuration is in conky-i3statusbar
+# You can also replace the istatus bar with a conky
+# start-conky-i3statusbar.sh is started and conky will follow
+# documentation : https://i3wm.org/docs/user-contributed/conky-i3bar.html
+# conky configuration is in conky-i3statusbar
 
 #status_command ~/.config/i3/start-conky-i3statusbar.sh
 
@@ -910,88 +973,12 @@ bar {
 # DarkGrey background with white text - not focus grey background - black text
 # Windows decoration colors
 # class                 border  backgr. text    indicator
-client.placeholder      #242424 #242424 #242424
-client.background       #242424 #242424 #242424
-client.focused          #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
-client.unfocused        #222222 #222222 #aaaaaa #222222
-client.focused_inactive #222222 #222222 #a9a9a9 #222222
-client.urgent           #d42121 #d42121 #f7f7f7 #d42121
-
-
-#################################################################
-################### BAR APPEARANCE ARCHIVE ######################
-#################################################################
-
-# Orange background with black text - not focus grey background - white text
-# Windows decoration colors
-# class                   border  backgr. text    indicator
-# client.background color         #222222
-# client.focused          #FFAF00 #FFAF00 #333333 #00AA00
-# client.unfocused        #222222 #222222 #aaaaaa #2e9ef4
-# client.focused_inactive #333333 #5f676a #ffffff #484e50
-# client.urgent           #2f343a #900000 #ffffff #900000
-
-
-# DarkGrey background with white text - not focus grey background - black text
-# Windows decoration colors
-# https://i3wm.org/docs/userguide.html#_changing_colors
-# client.background color
-# class                   border  backgr. text    indicator
-# client.focused          #4c7899 #285577 #ffffff #2e9ef4
-# client.focused_inactive #333333 #5f676a #ffffff #484e50
-# client.unfocused        #333333 #222222 #888888 #292d2e
-# client.urgent           #2f343a #900000 #ffffff #900000
-# client.placeholder      #000000 #0c0c0c #ffffff #000000
-
-#   colors {
-#            background #222222
-#            statusline #eeeeee
-#            separator #666666
-             #                  border  backgr. text
-#            focused_workspace  #4c7899 #285577 #ffffff
-#            active_workspace   #333333 #5f676a #ffffff
-#            inactive_workspace #333333 #222222 #888888
-#            urgent_workspace   #2f343a #900000 #ffffff
-#            }
-
-# Alternatives
-# BLue and grey Colors
-# https://github.com/Gravemind/ArchLinux/blob/master/.i3/config
-# class                   border  backgr. text    indicator
-# client.focused          #000000 #285577 #dddddd #0099ff
-# client.focused_inactive #000000 #333333 #888888 #484e50
-# client.unfocused        #000000 #000000 #555555 #292d2e
-# client.urgent           #2f343a #900000 #ffffff #900000
-
-# blue background with white text
-# Windows decoration colors
-# class                   border  backgr. text    indicator
-# client.background color         #222222
-# client.focused          #4c7899 #285577 #ffffff #2e9ef4
-# client.focused_inactive #333333 #5f676a #ffffff #484e50
-# client.unfocused        #333333 #222222 #888888 #292d2e
-# client.urgent           #2f343a #900000 #ffffff #900000
-
-# Blue-green background - orange text
-# Windows decoration colors
-# http://www.fastlinux.eu/_archiv/index.php?page=linux047
-# class                    border  backgr. text
-# client.focused           #2B6473 #2B6473 #FFA000
-# client.focused_inactive  #004050 #004050 #FFA000
-# client.unfocused         #004050 #004050 #cccccc
-# client.urgent            #900000 #900000 #ffffff
-
-
-# Red background - black text
-# Windows decoration colors
-# https://github.com/Blueblur/dotfiles/blob/master/.i3/config
-# class                 border  backgr. text    indicator
-# client.focused          #d64937 #d64937 #2D2D2D #2e9ef4
-# client.focused_inactive #2d2d2d #2d2d2d #dcdcdc #484e50
-# client.unfocused        #2D2D2D #2d2d2d #dcdcdc #292d2e
-# client.urgent           #2D2D2D #2D2D2D #dcdcdc #900000
-
-
+# client.placeholder      #242424 #242424 #242424
+# client.background       #242424 #242424 #242424
+# client.focused          #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
+# client.unfocused        #222222 #222222 #aaaaaa #222222
+# client.focused_inactive #222222 #222222 #a9a9a9 #222222
+# client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
 
 #####################################################################################################################

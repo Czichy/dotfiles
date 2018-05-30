@@ -1,3 +1,4 @@
-if [[ ! $DISPLAY && $XDG_VTNR -eq  1 ]]; then
-	exec startx
-fi
+# Commands to execute asynchronously once after a login
+{
+  dircolors -b /usr/share/LS_COLORS >! "$HOME/.dircolors.zsh"
+} &!
