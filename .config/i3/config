@@ -502,9 +502,9 @@ exec --no-startup-id nitrogen --restore
 #not workspace related
 
 # terminal
-bindsym $mod+Return exec --no-startup-id termite;focus
-bindsym control+mod1+t exec --no-startup-id termite; focus
-bindsym control+mod1+Return exec --no-startup-id termite; focus
+bindsym $mod+Return exec --no-startup-id alacritty;focus
+bindsym control+mod1+t exec --no-startup-id alacritty; focus
+bindsym control+mod1+Return exec --no-startup-id alacritty; focus
 
 #System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
@@ -609,7 +609,8 @@ bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
 #####################################################################################################################
 
 # Set default workspace layout
-workspace_layout tabbed
+workspace_layout default
+#tabbed
 
 # Specific window configurationfor_window    [class=".*"]                   sticky enable
 for_window    [window_role="pop-up"]         floating enable
@@ -620,8 +621,8 @@ for_window    [class="Rofi"]                 floating enable
 for_window    [class="usbguard-applet-qt"]   floating enable, resize set 1000 600, move position center
 for_window    [class="Google-chrome"]        move container to $workspace2, title_format "Google Chrome"
 for_window    [class="Chromium"]             move container to $workspace2, title_format "Chromium"
-for_window    [class="Firefox"]              move container to $workspace2, title_format "Google Chrome"   
-for_window    [class="Wire"]                 move container to $workspace3
+for_window    [class="Firefox"]              move container to $workspace2, title_format "Firefox", focus   
+for_window    [class="Wire"]                 move container to $workspace3                                
 for_window    [class="Slack"]                move container to $workspace3
 for_window    [class="Thunderbird"]          move container to $workspace4
 for_window    [class="TeamViewer"]           move container to $workspace9, floating enable, sticky disable
