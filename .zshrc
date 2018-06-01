@@ -24,6 +24,8 @@ if [[ "$HOST" =~ "crmdevvm-" ]]; then
   source ~/.zsh/autorun-same-tmux.zsh
 fi
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Lazy-loading functionality
 source ~/.zsh/sandboxd.zsh
 

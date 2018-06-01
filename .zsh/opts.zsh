@@ -24,3 +24,13 @@ setopt   correctall autocd recexact longlistjobs
 setopt   autoresume histignoredups pushdsilent
 setopt   autopushd pushdminus extendedglob rcquotes mailwarning
 unsetopt bgnice autoparamslash
+
+### Autoload zsh modules when they are referenced
+#################################################
+autoload -U history-search-end
+zmodload -a zsh/stat stat
+zmodload -a zsh/zpty zpty
+zmodload -a zsh/zprof zprof
+#zmodload -ap zsh/mapfile mapfile
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
