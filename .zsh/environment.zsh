@@ -10,7 +10,7 @@ export WORDCHARS='*?_.[]~&!#$%^(){}<>'
 # Keep py3status 'do_not_disturb' module in sync with i3 lock and restart
 #export PY3STATUS_DND_LOCK="$HOME/.cache/py3status_do_not_disturb.lock"
 
-#export POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+export POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
 # My own binaries
 export PATH="$HOME/bin:$PATH"

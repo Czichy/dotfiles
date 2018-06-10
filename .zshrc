@@ -34,6 +34,7 @@ source ~/.zsh/environment.zsh
 source ~/.dircolors.zsh
 
 # Load prompt configuration
+#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 source ~/.zsh/prompt.zsh
 
 # Load plugins

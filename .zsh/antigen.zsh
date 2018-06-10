@@ -15,7 +15,7 @@ antigen bundles <<EOB
   mafredri/zsh-async
 EOB
 
-#antigen theme bhilburn/powerlevel9k powerlevel9k
-antigen theme maximbaz/spaceship-prompt   
+antigen theme bhilburn/powerlevel9k powerlevel9k
+#antigen theme maximbaz/spaceship-prompt   
 
 antigen apply               
