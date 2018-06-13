@@ -1,5 +1,6 @@
 [Alsa]
-card=default
+card=HDA Intel PCH
+channel=Master
 
 [Notification]
 show_notification=true

@@ -1,4 +1,13 @@
+            echo " 1) $(menu_item "amarok")"            echo " 2) $(menu_item "audacious")"            echo " 3) $(menu_item "banshee") $AUR"            echo " 4) $(menu_item "clementine")"            echo " 5) $(menu_item "deadbeef")"            echo " 6) $(menu_item "guayadeque") $AUR"            echo " 7) $(menu_item "musique") $AUR"            echo " 8) $(menu_item "nuvolaplayer-git") $AUR"            echo " 9) $(menu_item "pragha")"            echo "10) $(menu_item "radiotray") $AUR"            echo "11) $(menu_item "rhythmbox")"            echo "12) $(menu_item "spotify") $AUR"            echo "13) $(menu_item "timidity++") $AUR"            echo "14) $(menu_item "tomahawk") $AUR"            echo "15) $(menu_item "quodlibet")"            echo ""            echo " b) BACK"            echo "",V
+        package_install "thunar-archive-plugin"        package_install "thunar-volman",V
+        package_install "thunar",V
+       # package_install "gnome-logs"       # package_install "gnome-disk-utility",V
 #,v
+            	  aur_package_install "google-chrome",V
+    info underline,V
+#exec --no-startup-id setxkbmap be,V
+### powerline #powerline-daemon -q#. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh,V
+#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme,V
 echo "################################################################"echo "####    Software from Arch Linux Repository installed     ######"echo "################################################################"},V
   #aur_package_install "surfn-icons-git"  #git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes,V
   #aur_package_install "numix-circle-icon-theme-git"  #aur_package_install "pamac-aur"  #aur_package_install "paper-icon-theme-git"  #aur_package_install "papirus-icon-theme-git",V

@@ -447,7 +447,7 @@ for_window [class="Spotify"] focus
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Updater
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 
 # bluetooth
 #exec --no-startup-id blueberry-tray
@@ -899,6 +899,7 @@ bar {
                     inactive_workspace $color_normal_gray     $color_normal_gray      $color_normal_white
                     urgent_workspace   $color_bright_yellow   $color_bright_yellow $color_normal_black
         }
+        strip_workspace_numbers yes
 }
 
 # Colors                  border                 background             text                   indicator       child_border
@@ -1040,7 +1041,6 @@ client.placeholder $color_unused $color_normal_black $color_unused $color_unused
 # NOT USED
 
 # Settings of arcolinux will be applied
-#exec --no-startup-id setxkbmap be
 exec --no-startup-id setxkbmap de
 exec_always --no-startup-id numlockx on
 # Configure keyboard repeat speed

@@ -34,7 +34,6 @@ source ~/.zsh/environment.zsh
 source ~/.dircolors.zsh
 
 # Load prompt configuration
-#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 source ~/.zsh/prompt.zsh
 
 # Load plugins
@@ -54,6 +53,3 @@ source ~/.zsh/ssh.zsh
 source ~/.zsh/mse.zsh
 
 neofetch
-### powerline 
-#powerline-daemon -q
-#. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
