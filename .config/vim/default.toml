@@ -52,6 +52,9 @@ repo = 'CharlesGueunet/quickmenu.vim'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'mhinz/vim-signify'
 
 # Operator /  Selection / Region

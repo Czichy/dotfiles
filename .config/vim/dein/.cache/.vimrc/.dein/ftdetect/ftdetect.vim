@@ -1,3 +1,7 @@
+autocmd BufReadPost *.fugitiveblame setfiletype fugitiveblame
+" markdown filetype file
+au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
+au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}.{des3,des,bf,bfa,aes,idea,cast,rc2,rc4,rc5,desx} set filetype=markdown
 " vint: -ProhibitAutocmdWithNoGroup
 
 " We take care to preserve the user's fileencodings and fileformats,
@@ -32,6 +36,3 @@ au BufReadPost *.s call s:gofiletype_post()
 au BufRead,BufNewFile *.tmpl set filetype=gohtmltmpl
 
 " vim: sw=2 ts=2 et
-" markdown filetype file
-au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
-au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}.{des3,des,bf,bfa,aes,idea,cast,rc2,rc4,rc5,desx} set filetype=markdown
