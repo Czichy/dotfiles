@@ -19,6 +19,9 @@ for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
    (( count = $count + 1 ))
  done
 
+# Load prompt configuration
+source ~/.zsh/prompt.zsh
+
 # Launch a tmux session
 if [[ "$HOST" =~ "crmdevvm-" ]]; then
   source ~/.zsh/autorun-same-tmux.zsh
@@ -33,8 +36,6 @@ source ~/.zsh/sandboxd.zsh
 source ~/.zsh/environment.zsh
 source ~/.dircolors.zsh
 
-# Load prompt configuration
-source ~/.zsh/prompt.zsh
 
 # Load plugins
 source ~/.zsh/prezto.zsh
@@ -51,5 +52,6 @@ source ~/.zsh/git.zsh
 source ~/.zsh/fzf.zsh
 source ~/.zsh/ssh.zsh
 source ~/.zsh/mse.zsh
+
 
 neofetch

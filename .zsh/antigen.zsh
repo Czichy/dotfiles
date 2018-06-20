@@ -15,7 +15,9 @@ antigen bundles <<EOB
   mafredri/zsh-async
 EOB
 
+# Load prompt configuration
 antigen theme bhilburn/powerlevel9k powerlevel9k
 #antigen theme maximbaz/spaceship-prompt   
+#source ~/.zsh/prompt.zsh
 
 antigen apply               
