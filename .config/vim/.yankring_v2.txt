@@ -1,3 +1,11 @@
+[[block]]block = "focused_window"max_width = 21,V
+## Czech RepublicServer = http://ftp.sh.cvut.cz/arch/$repo/os/$arch## FranceServer = http://ftp.u-strasbg.fr/linux/distributions/archlinux/$repo/os/$arch## VietnamServer = http://f.archlinuxvn.org/archlinux/$repo/os/$arch## GermanyServer = http://archlinux.eu.mirror.zoidplex.net/$repo/os/$arch## United StatesServer = http://mirror.lty.me/archlinux/$repo/os/$arch## ChinaServer = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch## NetherlandsServer = http://mirror.koddos.net/archlinux/$repo/os/$arch## GermanyServer = http://archlinux.mirror.iphh.net/$repo/os/$arch## GermanyServer = http://ftp.uni-hannover.de/archlinux/$repo/os/$arch## SpainServer = http://ftp.rediris.es/mirror/archlinux/$repo/os/$arch## AustraliaServer = http://archlinux.melbourneitmirror.net/$repo/os/$arch,V
+Server = http://mirror.adminbannok.com/archlinux/$repo/os/$arch,V
+## United KingdomServer = http://mirrors.manchester.m247.com/arch-linux/$repo/os/$arch## United StatesServer = http://mirrors.sorengard.com/archlinux/$repo/os/$arch## BulgariaServer = http://mirror.host.ag/archlinux/$repo/os/$arch## Thailand,V
+## PolandServer = http://arch.midov.pl/arch/$repo/os/$arch,V
+## ChinaServer = http://mirrors.163.com/archlinux/$repo/os/$arch## SlovakiaServer = http://tux.rainside.sk/archlinux/$repo/os/$arch,V
+## BrazilServer = http://br.mirror.archlinux-br.org/$repo/os/$arch## ItalyServer = http://mi.mirror.garr.it/mirrors/archlinux/$repo/os/$arch## LuxembourgServer = http://archlinux.mirror.root.lu/$repo/os/$arch## CanadaServer = http://mirror.csclub.uwaterloo.ca/archlinux/$repo/os/$arch## DenmarkServer = http://mirrors.dotsrc.org/archlinux/$repo/os/$arch## SpainServer = http://osl.ugr.es/archlinux/$repo/os/$arch## ThailandServer = http://mirror2.totbb.net/archlinux/$repo/os/$arch## ChinaServer = http://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch## MacedoniaServer = http://arch.softver.org.mk/archlinux/$repo/os/$arch## United StatesServer = http://archlinux.us-east.mirror.zoidplex.net/$repo/os/$arch## GreeceServer = http://ftp.ntua.gr/pub/linux/archlinux/$repo/os/$arch,V
+#VIDEO CARDS {{{,V
 [[plugins]]repo = 'airblade/vim-gitgutter',V
 ,V
         package_install "cronie",V
