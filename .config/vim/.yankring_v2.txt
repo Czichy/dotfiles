@@ -1,3 +1,7 @@
+####,1
+,V
+,V
+fi,V
 .,v
 # Load prompt configurationsource ~/.zsh/prompt.zsh,V
 POWERLEVEL9K_MODE="awesome-fontconfig",V
@@ -15,7 +19,6 @@ Server = http://mirror.adminbannok.com/archlinux/$repo/os/$arch,V
 ## BrazilServer = http://br.mirror.archlinux-br.org/$repo/os/$arch## ItalyServer = http://mi.mirror.garr.it/mirrors/archlinux/$repo/os/$arch## LuxembourgServer = http://archlinux.mirror.root.lu/$repo/os/$arch## CanadaServer = http://mirror.csclub.uwaterloo.ca/archlinux/$repo/os/$arch## DenmarkServer = http://mirrors.dotsrc.org/archlinux/$repo/os/$arch## SpainServer = http://osl.ugr.es/archlinux/$repo/os/$arch## ThailandServer = http://mirror2.totbb.net/archlinux/$repo/os/$arch## ChinaServer = http://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch## MacedoniaServer = http://arch.softver.org.mk/archlinux/$repo/os/$arch## United StatesServer = http://archlinux.us-east.mirror.zoidplex.net/$repo/os/$arch## GreeceServer = http://ftp.ntua.gr/pub/linux/archlinux/$repo/os/$arch,V
 #VIDEO CARDS {{{,V
 [[plugins]]repo = 'airblade/vim-gitgutter',V
-,V
         package_install "cronie",V
         system_ctl enable firewalld,V
         package_install "cronie",V
