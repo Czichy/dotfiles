@@ -552,9 +552,7 @@ bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 
 #workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;focus
-#bindsym $mod+F2 exec --no-startup-id atom;focus
-#bindsym control+mod1+w exec --no-startup-id geany;focus
+bindsym $mod+F2 exec --no-startup-id i3-msg $workspace8;exec ~/Jts/tws;$workspace8
 
 #workspace 3 related
 bindsym $mod+F3 exec --no-startup-id inkscape;focus
