@@ -15,7 +15,7 @@ alias rm!='\rm -rf'
 alias rsync='rsync --verbose --archive --info=progress2 --human-readable --compress --partial'
 alias sudo='sudo -E '
 alias vi='nvim'
-#alias vim='nvim'
+alias vim='nvim'
 
 # alias ls="exa --git --group-directories-first"
 alias ls="ls --color=auto"

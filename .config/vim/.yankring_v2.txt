@@ -1,3 +1,11 @@
+# Mount internal Windows partition with linux compatible permissions, i.e. 755 for directories (dmask=022) and 644 for files (fmask=133),V
+#/dev/disk/by-uuid/7272A86472A82EB3 		/home/czichy/Programming  ntfs-3g uid=userid,gid=groupid,dmask=022,fmask=133 0 0 #PARTUUID=ab9af0ea-da4c-4d31-860b-8301f018a1c7	/home     	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,subvolid=261,subvol=/@home,subvol=@home	0 0,V
+UUID=2aa8b25c-2372-4756-bfc4-73271b3afee3 	/home     	ext4     	rw,noatime,nodev,nosuid	0 0,V
+a,v
+	ext4     	rw,noatime,nodev,nosuid	0 0,v
+z,v
+	,v
+#assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8,V
 ',v
  ,v
 for_window    [class="~/Jts/tws"]            move container to $workspace8,V
@@ -90,9 +98,3 @@ post transaction hook missing lightdm dependency,v
 zsh alacrity,v
 yaourt gespeichertes paket installieren,v
 https://github.com/Czichy/bumblebee-status,v
-https://archlinux.fr/yaourt-en,v
-https://forum.antergos.com/topic/5054/how-do-i-uninstall-packages/7,v
-https://bbs.archlinux.org/viewtopic.php?id=225806,v
-vundle vs dein,v
-http://valloric.github.io/YouCompleteMe/,v
-christian,v

@@ -399,7 +399,8 @@ font pango:Noto Mono Regular 13
 #assign [class="Vmplayer|VirtualBox"]						    → 7
 
 # Workspace 8 file managers
-#assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
+assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
+assign [class="org.cryptomator.launcher.MainApplication"]                           → 8
 
 # Workspace 9 email clients
 #assign [class="Geary|Evolution"]                                                    → 9
