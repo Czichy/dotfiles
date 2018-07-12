@@ -3,12 +3,12 @@ env:
 
 window:
   dimensions:
-    columns: 80
-    lines: 24
+    columns: 160
+    lines: 48
 
   padding:
-    x: 10
-    y: 10
+    x: 2
+    y: 2
 
   decorations: true
 
@@ -95,7 +95,7 @@ mouse_bindings:
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
-  faux_scrollback_lines: 1
+  faux_scrolling_lines: 1
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
@@ -108,11 +108,22 @@ cursor_style: Block
 
 live_config_reload: false
 
+# Shell
+#
+# You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
+# Entries in shell.args are passed unmodified as arguments to the shell.
+#
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
+
 key_bindings:
   - { key: V,        mods: Control|Shift,    action: Paste               }
   - { key: C,        mods: Control|Shift,    action: Copy                }
   - { key: Q,        mods: Command, action: Quit                         }
-  - { key: W,        mods: Command, action: Quit                         }
+    #  - { key: W,        mods: Command, action: Quit                         }
   - { key: Insert,   mods: Shift,   action: PasteSelection               }
   - { key: Key0,     mods: Control, action: ResetFontSize                }
   - { key: Equals,   mods: Control, action: IncreaseFontSize             }
