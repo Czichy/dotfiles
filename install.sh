@@ -7,7 +7,7 @@ white='\e[0;37m'
 CMD="$1"
 dotfilesdir=$(pwd)
 backupdir=~/.dotfiles.orig
-dotfiles=(.zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc
+dotfiles=(.agignore .zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc
 .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zlogin .zprofile oh-my-zsh
 )
 dotfiles_config=(alacritty dunst htop i3 nvim polybar pulse rofi Thunar vim volumeicon xfce4)
@@ -69,6 +69,7 @@ set -x
     done
 
     ln -sf ~/.config/vim/.vimrc ~
+    ln -sf ~/.config/i3 ~/.config/sway
 
     set +x
     echo -e $blue"New dotfiles is installed!\n"$white >&2

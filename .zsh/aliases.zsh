@@ -10,7 +10,7 @@ alias http-serve='python3 -m http.server'
 alias makepkg-compress="PKGEXT='.pkg.tar.xz' makepkg"
 alias mkdir='mkdir -p'
 alias o='xdg-open'
-alias rm='rmtrash -rf'
+#alias rm='rmtrash -rf'
 alias rm!='\rm -rf'
 alias rsync='rsync --verbose --archive --info=progress2 --human-readable --compress --partial'
 alias sudo='sudo -E '

@@ -34,7 +34,7 @@ source ~/.zsh/sandboxd.zsh
 
 # Load environment variables
 source ~/.zsh/environment.zsh
-source ~/.dircolors.zsh
+#source ~/.dircolors.zsh
 
 
 # Load plugins
