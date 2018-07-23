@@ -621,8 +621,8 @@ for_window    [class="Rofi"]                 floating enable
 for_window    [class="usbguard-applet-qt"]   floating enable, resize set 1000 600, move position center
 for_window    [class="Google-chrome"]        move container to $workspace2, title_format "Google Chrome"
 for_window    [class="Chromium"]             move container to $workspace2, title_format "Chromium"
-for_window    [class="Firefox"]              move container to $workspace2, title_format "Firefox", focus   
-for_window    [class="Wire"]                 move container to $workspace3                                
+for_window    [class="Firefox"]              move container to $workspace2, title_format "Firefox", focus
+for_window    [class="Wire"]                 move container to $workspace3
 for_window    [class="Slack"]                move container to $workspace3
 for_window    [class="Thunderbird"]          move container to $workspace4
 for_window    [class="TeamViewer"]           move container to $workspace9, floating enable, sticky disable
@@ -886,7 +886,7 @@ set $color_unused        #ff0000
 bar {
     font pango:DejaVu Sans Mono, FontAwesome 12
         position top
-        status_command /usr/bin/i3status-rs ~/.config/i3/status.toml
+        status_command i3status-rs ~/.config/i3/status.toml
         colors {
 # Whole color settings
             background $color_normal_gray
