@@ -23,9 +23,9 @@ for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
 source ~/.zsh/prompt.zsh
 
 # Launch a tmux session
-if [[ "$HOST" =~ "crmdevvm-" ]]; then
+#if [[ "$HOST" =~ "crmdevvm-" ]]; then
   source ~/.zsh/autorun-same-tmux.zsh
-fi
+#fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 

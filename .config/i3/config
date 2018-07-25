@@ -3,7 +3,7 @@
 #################                          Start of all the settings                                #################
 #####################################################################################################################
 #####################################################################################################################
-
+set $term --no-startup-id alacritty
 
 # KEY DEFINITIONS TO REMEMBER
 
@@ -457,7 +457,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id nm-applet
 
 # num lock activated
-exec_always --no-startup-id numlockx on
+#exec_always --no-startup-id numlockx on
 
 # dropbox
 #exec --no-startup-id dropbox start
@@ -503,7 +503,17 @@ exec --no-startup-id nitrogen --restore
 #not workspace related
 
 # terminal
-bindsym $mod+Return exec --no-startup-id alacritty;focus
+# First I have a tmux window used for background scripts.
+#for_window [instance="dropdown"] floating enable
+#for_window [instance="dropdown"] resize set 625 400
+#for_window [instance="dropdown"] move scratchpad
+#for_window [instance="dropdown"] border pixel 5
+## Runs the tmuxinit script, which searches for an earlier tmux instance,
+## otherwise starts a new one (to prevent multiple dropdown sessions).
+#exec --no-startup-id $term -n dropdown -e tmuxinit
+
+bindsym $mod+Return exec $term
+#--no-startup-id alacritty;focus
 bindsym control+mod1+t exec --no-startup-id alacritty; focus
 bindsym control+mod1+Return exec --no-startup-id alacritty; focus
 
@@ -715,7 +725,7 @@ bindsym mod1+Down exec --no-startup-id variety --resume
 
 
 
-#####################################################################################################################
+####################################################################################################################
 #################                          audio settings                                           #################
 #####################################################################################################################
 
