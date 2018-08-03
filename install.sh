@@ -8,7 +8,7 @@ CMD="$1"
 dotfilesdir=$(pwd)
 backupdir=~/.dotfiles.orig
 dotfiles=(.agignore .zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc
-.scripts .SpaceVim .SpaceVim.d .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zlogin .zprofile oh-my-zsh
+.scripts .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zlogin .zprofile oh-my-zsh
 )
 dotfiles_config=(alacritty dunst htop i3 nvim onedrive pulse rofi volumeicon )
 
@@ -71,6 +71,8 @@ set -x
 
     ln -sf ~/.config/vim/.vimrc ~
     ln -sf ~/.config/i3 ~/.config/sway
+
+    ln -sf "$dotfilesdir/.config/.SpaceVim.d" ~/.config/nvim/
 
     set +x
     echo -e $blue"New dotfiles is installed!\n"$white >&2
