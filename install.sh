@@ -72,7 +72,7 @@ set -x
     ln -sf ~/.config/vim/.vimrc ~
     ln -sf ~/.config/i3 ~/.config/sway
 
-    ln -sf "$dotfilesdir/.config/.SpaceVim.d" ~/.config/nvim/
+    #ln -sf "$dotfilesdir/.config/.SpaceVim.d" ~/.config/nvim/
 
     set +x
     echo -e $blue"New dotfiles is installed!\n"$white >&2
