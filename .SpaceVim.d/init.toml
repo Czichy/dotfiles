@@ -1,0 +1,113 @@
+#=============================================================================
+# init.vim --- My SpaceVim config
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+#=============================================================================
+
+# SpaceVim options {{{
+[options]
+    default_indent = 4
+    enable_debug = 1
+    bootstrap_before = "TestFoo"
+    enable_ale = 0
+    # filemanager = "nerdtree"
+    # enable_ycm = 1
+    # snippet_engine = "ultisnips"
+    line_on_the_fly = 0
+    realtime_leader_guide = 1
+    enable_tabline_filetype_icon = 1
+    enable_os_fileformat_icon = 1
+    buffer_index_type = 0
+    statusline_separator = 'arrow'
+    github_username = 'wsdjeg'
+    auto_disable_touchpad = 0
+    colorscheme = 'gruvbox'
+    guifont = 'DejaVu Sans Mono for Powerline 9'
+    enable_tabline_filetype_icon = true
+    bootstrap_before = "myspacevim#before"
+# }}}
+
+# SpaceVim layer config {{{
+[[layers]]
+    name = 'denite'
+[[layers]]
+    name = 'tmux'
+[[layers]]
+    name = 'lang#tmux'
+[[layers]]
+    name = 'incsearch'
+[[layers]]
+    name = 'floobits'
+[[layers]]
+    name = 'github'
+[[layers]]
+    name = 'git'
+[[layers]]
+    name = 'VersionControl'
+[[layers]]
+    name = 'lang#go'
+[[layers]]
+    name = 'lang#json'
+[[layers]]
+    name = 'lang#java'
+[[layers]]
+    name = 'lang#c'
+[[layers]]
+    name = 'chat'
+[[layers]]
+    name = 'tags'
+[[layers]]
+    name = 'lang#toml'
+[[layers]]
+    name = 'lang#lua'
+[[layers]]
+    name = 'lang#php'
+[[layers]]
+    name = 'lang#python'
+[[layers]]
+    name = 'tools'
+[[layers]]
+    name = 'lang#vim'
+[[layers]]
+    name = 'lang#typescript'
+[[layers]]
+    name = 'colorscheme'
+[[layers]]
+    name = 'core#statusline'
+    enable = true
+[[layers]]
+    name = 'core#tabline'
+    enable = true
+[[layers]]
+    name = 'debug'
+[[layers]]
+    name = 'autocomplete'
+    auto-completion-return-key-behavior = "smart"
+    auto-completion-tab-key-behavior = "smart"
+[[layers]]
+    name = 'lang#markdown'
+    enableWcwidth = 1
+    listItemIndent = 1
+[[layers]]
+    name = 'shell'
+    default_position = 'top'
+    default_height = 30
+[[layers]]
+    name = 'lsp'
+    filetypes = [
+        'javascript'
+        ]
+    [layers.override_cmd]
+        rust = ['rustup', 'run', 'nightly', 'rls']
+# }}}
+
+# custom plugins {{{
+[[custom_plugins]]
+ name = 'lilydjwg/colorizer'
+ merged = 0
+ on_cmd = ['ColorHighlight']
+[[custom_plugins]]
+ name = 'kien/tabman.vim'
+ merged = 0
+# }}}
