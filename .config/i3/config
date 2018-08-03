@@ -25,7 +25,7 @@ set $term --no-startup-id alacritty
 # Key to rule them all : Super(Windows) or Alt key?
 
 # Mod4 = Windows or Super key on keyboard
-# Mod1 = Alt key on keyboard
+#Mod1 = Alt key on keyboard
 
 #Set Alt key
 #set $mod Mod1

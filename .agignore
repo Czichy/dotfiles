@@ -12,5 +12,5 @@
 .thunderbird/
 .wine/
 node_modules/
-
+.davfs2
 *.class
