@@ -8,9 +8,9 @@ CMD="$1"
 dotfilesdir=$(pwd)
 backupdir=~/.dotfiles.orig
 dotfiles=(.agignore .zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc
-.scripts .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zlogin .zprofile oh-my-zsh
+.screenlayout .scripts .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zlogin .zprofile oh-my-zsh
 )
-dotfiles_config=(alacritty dunst htop i3 nvim onedrive pulse rofi volumeicon )
+dotfiles_config=(alacritty dunst htop i3 nvim onedrive rofi volumeicon )
 
 
 printusage() {
@@ -128,6 +128,9 @@ case "$CMD" in
     -r)
         uninstall
         ;;
+    -z)
+        install_zsh
+        ;;
     *)
         echo "Command not found" >&2
         exit 1
@@ -153,5 +156,3 @@ else
     fi
 fi
 }
-
-install_zsh

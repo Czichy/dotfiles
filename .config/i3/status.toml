@@ -58,6 +58,11 @@ interval = 600
 #step_width = 3
 
 [[block]]
+block = "battery"
+#interval = 10
+#show = "both"
+
+[[block]]
 block = "time"
 interval = 60
 format = "%a %d/%m %R"
