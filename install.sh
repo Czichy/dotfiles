@@ -10,7 +10,7 @@ backupdir=~/.dotfiles.orig
 dotfiles=(.agignore .zsh .aliases .bash_profile .bash_prompt .bashrc .dircolors .editorconfig .exports .functions .gemrc
 .screenlayout .scripts .tmux.conf .wgetrc .Xresources .xinitrc .zshrc .zlogin .zprofile oh-my-zsh
 )
-dotfiles_config=(alacritty dunst htop i3 nvim onedrive rofi volumeicon )
+dotfiles_config=(alacritty dunst htop i3 nvim rofi volumeicon )
 
 
 printusage() {
