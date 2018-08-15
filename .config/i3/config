@@ -374,15 +374,15 @@ font pango:Noto Mono Regular 13
 # you can find the class with the program xprop
 
 # Workspace 1 browser related
-#assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
-#assign [class="Chromium|Google-chrome"]                                             → 1
+assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
+assign [class="Chromium|Google-chrome"]                                             → 1
 
 # Workspace 2 text editor related
 #assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
 #assign [class="Xed|xed|Brackets|Atom|Code|Geany"]                                   → 2
 
 # Workspace 3 Inkscape
-#assign [class="Inkscape"]                                                           → 3
+assign [class="keepassxc"]                                                           → 3
 
 # Workspace 4 Gimp
 #assign [class="Gimp"]                                                               → 4
@@ -393,7 +393,7 @@ font pango:Noto Mono Regular 13
 #assign [class="Meld"]                                                               → 5
 
 # Workspace 6 all video related software
-#assign [class="Vlc|vlc"]                                                            → 6
+assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 virtual machines and settings
 #assign [class="Vmplayer|VirtualBox"]						    → 7
@@ -566,7 +566,7 @@ bindsym control+mod1+g exec --no-startup-id chromium;focus
 bindsym $mod+F2 exec --no-startup-id i3-msg $workspace8;exec ~/Jts/tws;$workspace8
 
 #workspace 3 related
-bindsym $mod+F3 exec --no-startup-id inkscape;focus
+bindsym $mod+F3 exec --no-startup-id keepassxc;focus
 
 #workspace 4 related
 bindsym $mod+F4 exec --no-startup-id gimp;focus
@@ -628,10 +628,11 @@ for_window    [class="Pinentry"]             floating enable
 for_window    [class="copyq"]                floating enable
 for_window    [class="Peek"]                 floating enable
 for_window    [class="Rofi"]                 floating enable
+#for_window    [class="keepassxc"]            floating enable
 for_window    [class="usbguard-applet-qt"]   floating enable, resize set 1000 600, move position center
-for_window    [class="Google-chrome"]        move container to $workspace2, title_format "Google Chrome"
-for_window    [class="Chromium"]             move container to $workspace2, title_format "Chromium"
-for_window    [class="Firefox"]              move container to $workspace2, title_format "Firefox", focus
+#for_window    [class="Google-chrome"]        move container to $workspace2, title_format "Google Chrome"
+#for_window    [class="Chromium"]             move container to $workspace2, title_format "Chromium"
+#for_window    [class="Firefox"]              move container to $workspace2, title_format "Firefox", focus
 for_window    [class="Wire"]                 move container to $workspace3
 for_window    [class="Slack"]                move container to $workspace3
 for_window    [class="Thunderbird"]          move container to $workspace4
